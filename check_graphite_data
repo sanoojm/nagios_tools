@@ -164,7 +164,7 @@ def main(argv):
 
     if hw:
         graphite_data, graphite_lower, graphite_upper = get_hw_value(url, seconds)
-        print 'Current value: %s, lower band: %s, upper band: %s, url: %s' % \
+        print 'Current value: %s, lower band: %s, upper band: %s, url: %s'  % \
                (graphite_data, graphite_lower, graphite_upper, url)
         if (graphite_data > graphite_upper) or (graphite_data < graphite_lower):
             if critupper or critlower:
@@ -181,7 +181,7 @@ def main(argv):
         graphite_data = get_value(url, seconds)
     graphite_data *= scale
 
-    print 'Current value: %s, warn threshold: %s, crit threshold: %s, url: %s' % \
+    print 'Current value: %s, warn threshold: %s, crit threshold: %s, url: %s'  % \
            (graphite_data, warn, crit, url)
     if reverse == True:
         if crit >= graphite_data:
